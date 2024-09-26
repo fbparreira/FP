@@ -4,3 +4,13 @@ output: github_document
 
 
 # Test Readme file
+
+
+
+```{r}
+source("https://raw.githubusercontent.com/fbparreira/FP/main/code.R")
+```
+
+
+
+bla

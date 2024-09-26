@@ -1,9 +1,6 @@
 #
 #
 #
-#
-#
-#
 # Author: Filipe Parreira
 # contact: fbparreira@ualg.pt
 #
@@ -12,12 +9,12 @@
 #
 # Index:
 # 1. here()
-# 2. readxlsx_allsheets()
-# 3. emptyxlsx()
-# 4. writexlsx()
-#
-#
-#
+# 2. column_clean()
+# 3. readxlsx_allsheets()
+# 4. emptyxlsx()
+# 5. writexlsx()
+# 6. view_in_excel()
+# 7. textplot()
 
 
 

@@ -5,8 +5,7 @@
 `FP` is a collection of my personal functions that I use in my workflow.
 The goal is to make my workflow easier by either creating functions to
 address simple tasks or build on existing packages to mold the functions
-to my personal needs. “Stolen” ideas from here and there are referenced
-in the script.
+to my personal needs. “Stolen” ideas from here and there are referenced.
 
 ## Installation
 
@@ -30,12 +29,14 @@ source("https://raw.githubusercontent.com/fbparreira/FP/main/code.R")
 |`view_in_excel()`|Open a `df` directly in Excel, creating a temporary file. Alternative to the base `View()`.|
 |`textplot()`|Plots text as a base `plot()`.|
 
-## Usage
+## `here()`
 
-### `here()`
+### Description
 
 When you are working on a script not within an `R project`, instead of using `setwd()` 
-and manually paste the path, just run `here()`.
+to manually paste the path, just run `here()`.
+
+### Usage
 
 ``` r
 here()

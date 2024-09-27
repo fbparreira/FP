@@ -77,13 +77,10 @@ here <- function(){
 #
 # References:
 # https://stackoverflow.com/questions/39670918/replace-characters-in-column-names-gsub
-column_clean <- function(df, dots_to = " "){ 
+column_clean <- function(df){ 
   
-  if(dots_to == "_"){
-    colnames(df) <- gsub("\\.", "_", colnames(df)); df
-  }else{
     colnames(df) <- gsub("\\.", " ", colnames(df)); df
-  }
+  
 } 
 
 

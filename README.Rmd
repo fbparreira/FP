@@ -30,7 +30,7 @@ All `FP` functions are on the same script. Once loaded, all functions will
 be available on `Global Environment`. To load the functions you can
 source the script as follows:
 
-```{r}
+```{r eval=FALSE}
 source("https://raw.githubusercontent.com/fbparreira/FP/main/code.R")
 ```
 
@@ -55,7 +55,7 @@ to manually paste the path, just run `here()`.
 
 ### Usage
 
-```{r}
+```{r eval=FALSE}
 here()
 ```
 
@@ -68,7 +68,7 @@ replaces those `.` by `" "`.
 
 ### Usage
 
-```{r}
+```{r eval=FALSE}
 column_clean(df)
 ```
 

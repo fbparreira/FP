@@ -79,9 +79,6 @@ using `setwd()` to manually paste the path, just run `here()`.
 
     here()
 
-    ## ------ Working directory set to: 
-    ##  D:/LIBRARY/Statistic/R/GitHub/FP
-
 ## `column_clean()`
 
 ### Description
@@ -94,11 +91,6 @@ replaces those `.` by `" "`.
 ### Usage
 
     column_clean(df)
-
-    ##   a b c d
-    ## 1   1   1
-    ## 2   0   2
-    ## 3  23   3
 
 ### Arguments
 

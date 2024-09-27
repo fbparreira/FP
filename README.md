@@ -9,47 +9,97 @@ to my personal needs. “Stolen” ideas from here and there are referenced.
 
 ## Installation
 
-All `FP` functions are on the same script. Once loaded, all functions will 
-be available on `Global Environment`. To load the functions you can
+All `FP` functions are on the same script. Once loaded, all functions
+will be available on `Global Environment`. To load the functions you can
 source the script as follows:
 
-``` r
-source("https://raw.githubusercontent.com/fbparreira/FP/main/code.R")
-```
+    source("https://raw.githubusercontent.com/fbparreira/FP/main/code.R")
 
 ## Functions
 
-| **Name** | **Description** |
-|:--:|:---:|
-|`here()`|Sets the `wd` to the local path where the script is.|
-|`column_clean()`|Cleans the `.` in the column's names. An issue where imported `.xlsx` files with spaces in columns have.|
-|`readxlsx_allsheets()`|Reads all sheets in a `.xlsx` to a list.|
-|`emptyxlsx()`|Creates an empty `.xlsx` file.|
-|`writexlsx()`|Writes an `.xlsx` file.|
-|`view_in_excel()`|Open a `df` directly in Excel, creating a temporary file. Alternative to the base `View()`.|
-|`textplot()`|Plots text as a base `plot()`.|
+<table>
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Name</strong></th>
+<th style="text-align: center;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>here()</code></td>
+<td style="text-align: center;">Sets the <code>wd</code> to the local
+path where the script is.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>column_clean()</code></td>
+<td style="text-align: center;">Cleans the <code>.</code> in the
+column’s names. An issue where imported <code>.xlsx</code> files with
+spaces in columns have.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>readxlsx_allsheets()</code></td>
+<td style="text-align: center;">Reads all sheets in a <code>.xlsx</code>
+to a list.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>emptyxlsx()</code></td>
+<td style="text-align: center;">Creates an empty <code>.xlsx</code>
+file.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>writexlsx()</code></td>
+<td style="text-align: center;">Writes an <code>.xlsx</code> file.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>view_in_excel()</code></td>
+<td style="text-align: center;">Open a <code>df</code> directly in
+Excel, creating a temporary file. Alternative to the base
+<code>View()</code>.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>textplot()</code></td>
+<td style="text-align: center;">Plots text as a base
+<code>plot()</code>.</td>
+</tr>
+</tbody>
+</table>
 
 ## `here()`
 
 ### Description
 
-When you are working on a script not within an `R project`, instead of using `setwd()` 
-to manually paste the path, just run `here()`.
+When you are working on a script not within an `R project`, instead of
+using `setwd()` to manually paste the path, just run `here()`.
 
 ### Usage
 
-``` r
-here()
-```
+    here()
 
-### `column_clean()`
+    ## ------ Working directory set to: 
+    ##  D:/LIBRARY/Statistic/R/GitHub/FP
 
-When importing `.xlsx` files using `openxlsx::read.xlsx` (my preferred package for `.xlsx` files)
-to a `df`, the white spaces in the column names are translated to `.`. The `column_clean` function 
-replaces those `.` by `" "` (default) or `"_"`.
+## `column_clean()`
 
-``` r
-column_clean(df,
-             dots_to = " "
-             )
-```
+### Description
+
+When importing `.xlsx` files using `openxlsx::read.xlsx` (my preferred
+package for dealing with `.xlsx` files) to a `df`, the white spaces in
+the column names are translated to `.`. The `column_clean` function
+replaces those `.` by `" "`.
+
+### Usage
+
+    column_clean(df)
+
+    ##   a b c d
+    ## 1   1   1
+    ## 2   0   2
+    ## 3  23   3
+
+### Arguments
+
+\*`df` - A Dataframe object.

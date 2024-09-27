@@ -12,9 +12,8 @@ to my personal needs. “Stolen” ideas from here and there are referenced.
 
 ## Installation
 
-All `FP` functions are on the same script. Once loaded, all functions
-will be available on `Global Environment`. To load the functions you can
-source the script as follows:
+All `FP` functions are on the same script `code.R`. To load the
+functions you can source the script as follows:
 
 ``` r
 source("https://raw.githubusercontent.com/fbparreira/FP/main/code.R")

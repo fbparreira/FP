@@ -52,7 +52,7 @@ here()
 When importing `.xlsx` files using `openxlsx::read.xlsx` (my preferred
 package for dealing with `.xlsx` files) to a `df`, the white spaces in
 the column names are translated to `.`. The `column_clean` function
-replaces those `.` by `" "`.
+restores the white spaces from those `.`.
 
 ### Usage
 
@@ -63,3 +63,31 @@ column_clean(df)
 ### Arguments
 
 - `df` A Dataframe object.
+
+## `readxlsx_allsheets()`
+
+### Description
+
+Imports all sheets of an `.xlsx` file to a list.
+
+### Usage
+
+``` r
+readxlsx_allsheets(excel_file)
+```
+
+### Arguments
+
+- `excel_file` Path to the `.xlsx` file.
+
+### Example
+
+``` r
+# Import all sheets from `file.xlsx` to a list (`list_of_file_sheets`).
+list_of_file_sheets <- 
+  readxlsx_allsheets(excel_file = "path/to/file.xlsx")
+
+# Assign the sheet named `sheet_name` to a `df`
+df <- 
+  list_of_file_sheets[["sheet_name"]]
+```

@@ -68,7 +68,8 @@ column_clean(df)
 
 ### Description
 
-Imports all sheets of an `.xlsx` file to a list.
+The `readxlsx_allsheets()` function imports all sheets of an `.xlsx`
+file to a list.
 
 ### Usage
 
@@ -91,3 +92,164 @@ list_of_file_sheets <-
 df <- 
   list_of_file_sheets[["sheet_name"]]
 ```
+
+### References
+
+Idea stolen from this
+[post](https://stackoverflow.com/questions/12945687/read-all-worksheets-in-an-excel-workbook-into-an-r-list-with-data-frames)
+
+## `emptyxlsx()`
+
+### Description
+
+The `emptyxlsx()` function creates an empty `.xlsx` file. To me, this is
+particularly handy when running `for()` loops where I want each
+iteration to write in a different sheet of the same file.
+
+### Usage
+
+``` r
+emptyxlsx(excel_file,
+          overwrite = TRUE)
+```
+
+### Arguments
+
+- `excel_file` Path to the `.xlsx` file.
+
+- `overwrite` If `TRUE` (default), it overwrites an existing file.
+
+## `writexlsx()`
+
+### Description
+
+The `writexlsx()` function simplifies, to me, the use of the
+`openxlsx::` package to write `.xlsx` files. The `openxlsx::` package is
+my preferred package to deal with `.xlsx` files due to its versatility.
+However, its versatility comes at a tedious cost due to the way it uses
+the `workbooks`.I picked up the styles and functions I use the most on
+`openxlsx::` and combined them in the function `writexlsx()`.
+
+### Usage
+
+``` r
+writexlsx(df,
+          excel_file, 
+          sheet_name = FALSE, 
+          append_sheet = FALSE,
+          filter = FALSE,
+          alt_shading = FALSE,
+          alt_shading_var,
+          col_width_auto = FALSE,
+          freeze_first_row = FALSE,
+          bottom_border = FALSE,
+          bottom_border_var)
+```
+
+### Arguments
+
+- `df` Dataframe object.
+
+- `excel_file` Path to write file.
+
+- `sheet_name` Name for the Excel sheet. If empty/`FALSE` (default), it
+  goes for Excel default.
+
+- `append_sheet` If `FALSE` (default), overwrites an existing file. If
+  `TRUE`, adds a new sheet to the existing file. A sheet_name is
+  required in this case.
+
+- `filter` (default = `FALSE`) If `TRUE`, applies a filter to the first
+  row.
+
+- `alt_shading` (default = `FALSE`) If `TRUE`, applies alternative fill
+  color (grey and white) base on a variable (`alt_shading_var`).
+
+- `alt_shading_var` A variable within the `df` to apply the
+  `alt_shading`.
+
+- `col_width_auto` (default = `FALSE`) If `TRUE`, automatically adjusts
+  the column widths according to content.
+
+- `freeze_first_row` (default = `FALSE`) If `TRUE`, freezes the first
+  row.
+
+- `bottom_border` (default = `FALSE`) If `TRUE`, applies a bottom border
+  based on a variable (`bottom_border_var`).
+
+- `bottom_border_var` A variable within the `df` to apply the
+  `bottom_border`.
+
+### References:
+
+Idea stolen from
+[MarcioFCMartins](https://github.com/MarcioFCMartins/MMartins/blob/master/R/df_to_xlsx.R)
+
+## `view_in_excel()`
+
+### Description
+
+The function `view_in_excel()` allows to open a `df` directly in Excel.
+This is an alternative to the basic `View()` function, giving more
+flexibility when visually inspecting a `df`. It provides the path to the
+temporary file created. **It is dependent on** `writexlsx()`.
+
+### Usage
+
+``` r
+view_in_excel(df, 
+              filter = T,
+              alt_shading = FALSE,
+              alt_shading_var,
+              col_width_auto = TRUE,
+              freeze_first_row = TRUE,
+              bottom_border = FALSE,
+              bottom_border_var)
+```
+
+### Arguments
+
+- `df` Dataframe object.
+
+- `filter` If `TRUE` (default), applies a filter to the first row.
+
+- `alt_shading` (default = `FALSE`) If `TRUE`, applies alternative fill
+  color (grey and white) base on a variable (`alt_shading_var`).
+
+- `alt_shading_var` A variable within the `df` to apply the
+  `alt_shading`.
+
+- `col_width_auto` If `TRUE` (default), automatically adjusts the column
+  widths according to content.
+
+- `freeze_first_row` If `TRUE` (default), freezes the first row.
+
+- `bottom_border` (default = `FALSE`) If `TRUE`, applies a bottom border
+  based on a variable (`bottom_border_var`).
+
+- `bottom_border_var` A variable within the `df` to apply the
+  `bottom_border`.
+
+### References
+
+Idea stolen from this
+[post](https://stackoverflow.com/questions/12164897/quickly-view-an-r-data-frame-vector-or-data-table-in-excel)
+
+## `textplot()`
+
+### Description
+
+The `textplot()` function plots text as a base `plot()`
+
+### Usage
+
+``` r
+textplot(text, 
+         size)
+```
+
+### Arguments
+
+- `text` Text to be plotted
+
+- `Size` Size of the text

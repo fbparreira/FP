@@ -1,6 +1,16 @@
 ---
-output: github_document
+title: "README"
+output: md_document
 ---
+
+
+```{r eval=FALSE, include=FALSE}
+#render this .RMD to the .MD
+library(rmarkdown)
+
+render("README.Rmd", output_format = "md_document")
+```
+
 
 
 # Test Readme file

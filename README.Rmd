@@ -27,7 +27,7 @@ render("README.Rmd", output_format = "md_document")
 
 All `FP` functions are on the same script. To load the functions you can source the script as follows:
 
-```{r}
+``` r
 source("https://raw.githubusercontent.com/fbparreira/FP/main/code.R")
 ```
 

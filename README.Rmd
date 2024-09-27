@@ -1,6 +1,6 @@
 ---
 title: "README"
-output: md_document
+output: github_document
 ---
 
 
@@ -74,4 +74,4 @@ column_clean(df)
 
 ### Arguments
 
-*`df` - A Dataframe object.
+- `df` A Dataframe object.

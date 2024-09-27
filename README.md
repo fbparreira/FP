@@ -1,3 +1,6 @@
+README
+================
+
 # FP
 
 ## Overview
@@ -13,60 +16,21 @@ All `FP` functions are on the same script. Once loaded, all functions
 will be available on `Global Environment`. To load the functions you can
 source the script as follows:
 
-    source("https://raw.githubusercontent.com/fbparreira/FP/main/code.R")
+``` r
+source("https://raw.githubusercontent.com/fbparreira/FP/main/code.R")
+```
 
 ## Functions
 
-<table>
-<colgroup>
-<col style="width: 44%" />
-<col style="width: 55%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><strong>Name</strong></th>
-<th style="text-align: center;"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><code>here()</code></td>
-<td style="text-align: center;">Sets the <code>wd</code> to the local
-path where the script is.</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>column_clean()</code></td>
-<td style="text-align: center;">Cleans the <code>.</code> in the
-column’s names. An issue where imported <code>.xlsx</code> files with
-spaces in columns have.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>readxlsx_allsheets()</code></td>
-<td style="text-align: center;">Reads all sheets in a <code>.xlsx</code>
-to a list.</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>emptyxlsx()</code></td>
-<td style="text-align: center;">Creates an empty <code>.xlsx</code>
-file.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>writexlsx()</code></td>
-<td style="text-align: center;">Writes an <code>.xlsx</code> file.</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>view_in_excel()</code></td>
-<td style="text-align: center;">Open a <code>df</code> directly in
-Excel, creating a temporary file. Alternative to the base
-<code>View()</code>.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>textplot()</code></td>
-<td style="text-align: center;">Plots text as a base
-<code>plot()</code>.</td>
-</tr>
-</tbody>
-</table>
+| **Name** | **Description** |
+|:--:|:--:|
+| `here()` | Sets the `wd` to the local path where the script is. |
+| `column_clean()` | Cleans the `.` in the column’s names. An issue where imported `.xlsx` files with spaces in columns have. |
+| `readxlsx_allsheets()` | Reads all sheets in a `.xlsx` to a list. |
+| `emptyxlsx()` | Creates an empty `.xlsx` file. |
+| `writexlsx()` | Writes an `.xlsx` file. |
+| `view_in_excel()` | Open a `df` directly in Excel, creating a temporary file. Alternative to the base `View()`. |
+| `textplot()` | Plots text as a base `plot()`. |
 
 ## `here()`
 
@@ -77,7 +41,9 @@ using `setwd()` to manually paste the path, just run `here()`.
 
 ### Usage
 
-    here()
+``` r
+here()
+```
 
 ## `column_clean()`
 
@@ -90,8 +56,10 @@ replaces those `.` by `" "`.
 
 ### Usage
 
-    column_clean(df)
+``` r
+column_clean(df)
+```
 
 ### Arguments
 
-\*`df` - A Dataframe object.
+- `df` A Dataframe object.

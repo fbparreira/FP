@@ -73,17 +73,18 @@ here <- function(){
 #
 # Arguments:
 # df - Dataframe object
+# dots_to - (default = " ") If "_", replaces the "." to "_". If " " (default), replaces the "." to " ". 
 #
 # References:
 # https://stackoverflow.com/questions/39670918/replace-characters-in-column-names-gsub
-column_clean <- function(df){ 
-  colnames(df) <- gsub("\\.", " ", colnames(df)); df 
+column_clean <- function(df, dots_to = " "){ 
+  
+  if(dots_to == "_"){
+    colnames(df) <- gsub("\\.", "_", colnames(df)); df
+  }else{
+    colnames(df) <- gsub("\\.", " ", colnames(df)); df
+  }
 } 
-
-
-
-
-
 
 
 

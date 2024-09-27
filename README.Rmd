@@ -44,3 +44,14 @@ Once loaded, all functions will be visible on `Global Environment`.
 |`writexlsx()`|Writes an `.xlsx` file.|
 |`view_in_excel()`|Open a `df` directly in Excel, creating a temporary file. Alternative to the base `View()`.|
 |`textplot()`|Plots text as a base `plot()`.|
+
+
+
+
+
+```{r}
+column_clean(df,
+             dots_to = " "
+             )
+```
+
